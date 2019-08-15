@@ -10,7 +10,7 @@ const app = express();
 //permitir que envie dados em json
 app.use(express.json());
 
-//permite o acesso do json de outros endereços
+//permite o acesso da API REST de outros endereços
 app.use(cors());
 
 //iniciando a conexao do DB
