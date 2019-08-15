@@ -1,5 +1,6 @@
 //importando o express
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 
@@ -8,6 +9,9 @@ const requireDir = require('require-dir');
 const app = express();
 //permitir que envie dados em json
 app.use(express.json());
+
+//permite o acesso do json de outros endereços
+app.use(cors());
 
 //iniciando a conexao do DB
 mongoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser: true });
